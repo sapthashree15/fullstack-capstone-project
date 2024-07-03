@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'; // Removed useNavigate as it's not used
 import MainPage from './components/MainPage/MainPage';
 import LoginPage from './components/LoginPage/LoginPage';
 import DetailsPage from './components/DetailsPage/DetailsPage';
@@ -11,7 +11,6 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
-  const navigate = useNavigate();
   return (
     <>
       <Navbar />
@@ -23,7 +22,7 @@ function App() {
         <Route path="/app/register" element={<RegisterPage />} />
         <Route path="/app/product/:productId" element={<DetailsPage />} />
         <Route path="/app/search" element={<SearchPage />} />
-        <Route path="/app/profile" element={<Profile/>} />
+        <Route path="/app/profile" element={<Profile />} />
       </Routes>
     </>
   );
